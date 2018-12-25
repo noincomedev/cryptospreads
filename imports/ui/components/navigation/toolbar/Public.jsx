@@ -19,7 +19,7 @@ const styles = theme => ({
 export default withStyles(styles, { withTheme: true })(({ classes, theme }) => (
   <Toolbar classes={{ root: classes.toolbar }}>
     <GithubCorner
-      href="https://www.github.com/noincomedev"
+      href="https://github.com/noincomedev/cryptospreads"
       bannerColor={theme.palette.custom.accent}
       octoColor={theme.palette.primary.main}
       size={100}
