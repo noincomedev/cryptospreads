@@ -1,0 +1,23 @@
+type Market {
+  id: ID
+  name: String
+  base_currency: String
+  quote_currency: String
+  ticker: Ticker
+}
+
+type Ticker {
+  market_id: ID
+  last_price: String
+  min_ask: String
+  max_bid: String
+  volume: String
+  price_variation_24h: String
+  price_variation_7d: String
+  currency: String
+  spread: Float
+}
+
+extend type Query {
+  markets: [Market]
+}

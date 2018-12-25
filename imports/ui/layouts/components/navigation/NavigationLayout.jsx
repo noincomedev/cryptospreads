@@ -13,7 +13,8 @@ const styles = theme => ({
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
-    })
+    }),
+    backgroundColor: theme.palette.background.default
   },
   logo: {
     color: theme.palette.common.white,
@@ -39,13 +40,11 @@ class NavigationLayout extends Component {
     let { open } = this.state;
     return (
       <nav>
-        <AppBar position="fixed" color="secondary" className={classes.appBar}>
-          {Meteor.userId() ? (
-            <PrivateToolbar open={open} onToggleDrawer={this.toggleDrawer} />
-          ) : (
-            <PublicToolbar />
-          )}
-        </AppBar>
+        {Meteor.userId() ? (
+          <PrivateToolbar open={open} onToggleDrawer={this.toggleDrawer} />
+        ) : (
+          <PublicToolbar />
+        )}
       </nav>
     );
   }

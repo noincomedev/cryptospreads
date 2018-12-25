@@ -9,6 +9,9 @@ const styles = theme => ({
   container: {
     margin: "auto",
     minHeight: "100%"
+  },
+  spinner: {
+    color: "#11BEB3 !important"
   }
 });
 
@@ -16,8 +19,8 @@ let Spinner = ({ classes, color, size }) => (
   <Grid container justify="center" classes={{ container: classes.container }}>
     <CircularProgress
       size={size ? size : 50}
-      color={color ? color : "secondary"}
       variant="indeterminate"
+      classes={{ colorPrimary: classes.spinner }}
     />
   </Grid>
 );
@@ -27,4 +30,4 @@ Spinner.propTypes = {
   size: PropTypes.number
 };
 
-export default withStyles(styles)(Spinner);
+export default withStyles(styles, { withTheme: true })(Spinner);

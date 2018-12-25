@@ -11,11 +11,7 @@ const styles = theme => ({
     display: "flex",
     flex: 1,
     flexDirection: "column",
-    minHeight: "100%",
-    marginTop: 56,
-    [theme.breakpoints.up("sm")]: {
-      marginTop: 64
-    }
+    minHeight: "100%"
   }
 });
 

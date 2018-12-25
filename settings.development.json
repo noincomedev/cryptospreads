@@ -1,5 +1,10 @@
 {
   "public": {
-    "appName": "Boilerplate"
+    "appName": "CRYPTOSPREADS",
+    "buda": {
+      "api": {
+        "BASE_URL": "https://www.buda.com/api/v2/"
+      }
+    }
   }
 }
